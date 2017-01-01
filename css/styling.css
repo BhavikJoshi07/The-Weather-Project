@@ -4,6 +4,7 @@ body {
   color: #DDDDDD;
   -webkit-font-smoothing: antialiased;
   width: 100%;
+  background-color: #030003;
 }
 #firstPage {
   display: table;
@@ -683,13 +684,22 @@ p.footer-links a {
 }
 
 @media screen and (max-width: 576px){
+  
+  body {
+    width: 100vw;
+  }
+    
+  #firstPage {
+    height: 101vh;
+    width: 101vw;
+  }
    
   #titleText {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   #titleText h1{
-    font-size: 54px;
+    font-size: 38px;
     font-family: 'Josefin Slab', serif;
     font-weight: 700;
     text-shadow: 2px 2px 2px #aaa;
@@ -697,43 +707,43 @@ p.footer-links a {
 
   #titleText h3 {
     margin-top: 10px;
-    font-size: 40px;
+    font-size: 32px;
   }
   
   #inputForm {
     margin-top: 15px;
-    font-size: 36px;
+    font-size: 28px;
   }
   
   input[type=text] {
-    font-size: 36px;
+    font-size: 30px;
     height: 60px;
   }
   
   .grey-button {
-    margin-top: 5;
+    margin-top: 5px;
     height: 44px;
     font-size: 32px;
   }
   
   #currentForecast {
     margin: 15px auto;
-    width: 80%;
-    height: 270px;
+    width: 100%;
+    height: 250px;
     background-color: black;
     opacity:0.8;
     color: #FFFFFF;
-    padding: 20px 0 0 40px;
+    padding-left: 10px;
   }
 
   #forecastText {
-    font-size: 26px;
+    font-size: 22px;
     text-align: left;
   }
   
   #footerFront {
     margin-left: 0;
-    margin-top: 320px;
+    margin-top: 220px;
     font-size: 12px;
     height: 40px;
   }
@@ -748,12 +758,12 @@ p.footer-links a {
   
   #secondPage {
     width: 100%;
-    height: 100vh;
+    height: 101vh;
     background-color: #030003;
   }
 
   #exForecastText {
-    font-size: 30px;
+    font-size: 24px;
     padding: 20px 20px 10px 20px;;
     text-align: center;
   }
@@ -795,9 +805,9 @@ p.footer-links a {
   }
   
   .footer-distributed{
-    font-size: 14px;
-    margin-top: 30px;
-    margin-left: -10px;
+    font-size: 8px;
+    margin-top: -15px;
+    margin-left: 0;
   }
 
 }

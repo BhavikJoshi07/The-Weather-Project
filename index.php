@@ -120,9 +120,7 @@
         <div class="footer-right">
 
           <a href="mailto:bhavikjoshi29@gmail.com"><i class="fa fa-envelope"></i></a>
-          <a href="https://www.facebook.com/BhavikJoshi07"><i class="fa fa-facebook"></i></a>
           <a href="https://twitter.com/BhavikJoshi07"><i class="fa fa-twitter"></i></a>
-          <a href="https://in.linkedin.com/in/bhavikjoshi07"><i class="fa fa-linkedin"></i></a>
 
         </div>
 
@@ -313,9 +311,7 @@
         <div class="footer-right">
 
           <a href="mailto:bhavikjoshi29@gmail.com"><i class="fa fa-envelope"></i></a>
-          <a href="https://www.facebook.com/BhavikJoshi07"><i class="fa fa-facebook"></i></a>
           <a href="https://twitter.com/BhavikJoshi07"><i class="fa fa-twitter"></i></a>
-          <a href="https://in.linkedin.com/in/bhavikjoshi07"><i class="fa fa-linkedin"></i></a>
 
         </div>
 
