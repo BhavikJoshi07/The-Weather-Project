@@ -1,0 +1,804 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  color: #DDDDDD;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+#firstPage {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../res/bg7.jpeg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#meetDeveloper {
+  float: right;
+  height: 30px;
+  background-color: chartreuse;
+  width: 120px;
+}
+
+#titleText {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#titleText h1{
+  font-size: 80px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+#titleText h3 {
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+#inputForm {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=text] {
+  border: none;
+  outline: none;
+  height: 75px;
+  border-radius: 0;
+  text-align: center;
+  background: none;
+  font-size: 54px;
+  color: #DDDDDD;
+  max-width: 90%;
+  padding: 1rem;
+  border: 2px dashed rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  cursor: text;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+input[type=text]:required {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input[type=text]:focus {
+  border-bottom: 2px dashed rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input[type=text]:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input[type=text]:required:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.grey-button {
+  position: relative;
+  margin-left: 20px;
+  vertical-align: middle;
+  width: 200px;
+  height: 68px;
+  padding: 0;
+  font-size: 34px;
+  color:white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #454545;
+  border: 0;
+  border-bottom: 2px solid #2f2e2e;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2f2e2e;
+  box-shadow: inset 0 -2px #2f2e2e;
+}
+.grey-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#errorDiv {
+  text-align: center;
+  font-size: 20px;
+}
+
+#currentForecast {
+  margin: 15px auto;
+  width: 70%;
+  height: 330px;
+  background-color: black;
+  opacity:0.8;
+  color: #FFFFFF;
+  padding: 12px 0 0 48px;
+}
+
+#errorDiv {
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#forecastText {
+  font-size: 34px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#footerFront {
+  margin-left: -30px;
+  margin-top: 400px;
+  height: 50px;
+}
+
+.units {
+  text-transform: none;
+}
+
+
+.btn-circle {
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  padding: 6px 16px;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.btn-circle:hover,
+.btn-circle:focus {
+  outline: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn-circle i.animated {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+}
+.btn-circle:hover i.animated {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+#navButton { 
+  text-align: center;
+  margin: 0 auto;
+}
+
+#secondPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #030003;
+}
+
+#exForecastText {
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Card Styles */
+
+.card {
+  color: #421014;
+  margin-top: 15px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.card-block{
+  height: 120px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.blockContents {
+  margin-left: -50px;
+}
+
+.card-block h3 {
+  display: inline-block;
+  font-size: 46px;
+}
+
+.card-img-top {
+  margin-top: -15px;
+}
+
+.card li {
+  height: 60px;
+}
+
+.dateLi {
+  font-size: 20px;
+  padding-left:30px;
+}
+
+.units {
+  text-transform: none;
+}
+
+.footer-distributed{
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	margin-top: 60px;
+}
+
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	max-width: 180px;
+  margin-right: 20px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+}
+
+
+@media screen and (max-width: 1200px){
+  #titleText {
+    margin-top: 32px;
+  }
+
+  #titleText h1{
+    font-size: 54px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #aaa;
+  }
+
+  #titleText h3 {
+    margin-top: 10px;
+    font-size: 44px;
+  }
+  
+  #inputForm {
+    margin-top: 10px;
+    font-size: 38px;
+  }
+  
+  input[type=text] {
+    font-size: 38px;
+    height: 48px;
+  }
+  
+  .grey-button {
+    margin-top: 5;
+    height: 48px;
+    font-size: 32px;
+  }
+  
+  #currentForecast {
+    margin: 10px auto;
+    width: 110%;
+    height: 330px;
+    background-color: black;
+    opacity:0.8;
+    color: #FFFFFF;
+    margin-left: -20px;
+    padding: 15px 0 0 50px;
+  }
+
+  #forecastText {
+    font-size: 32px;
+    text-align: left;
+  }
+  
+  #footerFront {
+    margin-left: 0;
+    margin-top: 360px;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .btn-circle {
+    width: 60px;
+    height: 60px;
+    margin-top:10px;
+    padding: 10px 10px;
+    font-size: 30px;
+  }
+
+  #secondPage {
+    width: 100%;
+    height: 100vh;
+    background-color: #030003;
+  }
+
+  #exForecastText {
+    font-size: 44px;
+    padding: 20px 20px 10px 20px;;
+    text-align: center;
+  }
+
+  /*Card Styles */
+
+  .card {
+    color: #421014;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .card-block{
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .blockContents {
+    margin-left: -30px;
+  }
+
+  .card-block h3 {
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  .card-img-top {
+    margin-top: -15px;
+  }
+
+  .card li {
+    height: 54px;
+  }
+
+  .dateLi {
+    font-size: 24px;
+    padding-left:36px;
+  }
+  
+  .footer-distributed{
+    margin-top: 24px;
+  }
+  
+}
+
+@media screen and (max-width: 992px){
+  #titleText {
+    margin-top: 32px;
+  }
+
+  #titleText h1{
+    font-size: 50px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #aaa;
+  }
+
+  #titleText h3 {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+  
+  #inputForm {
+    margin-top: 10px;
+    font-size: 36px;
+  }
+  
+  input[type=text] {
+    font-size: 36px;
+    height: 48px;
+  }
+  
+  .grey-button {
+    margin-top: 5;
+    height: 48px;
+    font-size: 32px;
+  }
+  
+  #currentForecast {
+    margin: 10px auto;
+    width: 120%;
+    height: 330px;
+    background-color: black;
+    opacity:0.8;
+    color: #FFFFFF;
+    margin-left: -30px;
+    padding: 10px 0 0 30px;
+  }
+
+  #forecastText {
+    font-size: 34px;
+    text-align: left;
+  }
+  
+  #footerFront {
+    margin-left: 0;
+    margin-top: 340px;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .btn-circle {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    padding: 7px 8px;
+    font-size: 20px;
+  }
+  
+  #secondPage {
+    width: 100%;
+    height: 100vh;
+    background-color: #030003;
+  }
+
+  #exForecastText {
+    font-size: 44px;
+    padding: 20px 20px 10px 20px;;
+    text-align: center;
+  }
+
+  /*Card Styles */
+
+  .card {
+    color: #421014;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .card-block{
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .blockContents {
+    margin-left: -30px;
+  }
+
+  .card-block h3 {
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  .card-img-top {
+    margin-top: -15px;
+  }
+
+  .card li {
+    height: 52px;
+  }
+
+  .dateLi {
+    font-size: 24px;
+    padding-left:36px;
+  }
+  
+  .footer-distributed{
+    margin-top: 50px;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+    
+  #titleText {
+    margin-top: 40px;
+  }
+
+  #titleText h1{
+    font-size: 64px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #aaa;
+  }
+
+  #titleText h3 {
+    margin-top: 10px;
+    font-size: 48px;
+  }
+  
+  #inputForm {
+    margin-top: 15px;
+    font-size: 42px;
+  }
+  
+  input[type=text] {
+    font-size: 42px;
+    height: 60px;
+  }
+  
+  .grey-button {
+    margin-top: 5;
+    height: 48px;
+    font-size: 32px;
+  }
+  
+  #currentForecast {
+    margin: 15px auto;
+    width: 70%;
+    height: 310px;
+    background-color: black;
+    opacity:0.8;
+    color: #FFFFFF;
+    padding: 10px 0 0 54px;
+  }
+
+  #forecastText {
+    font-size: 30px;
+    text-align: left;
+  }
+  
+  #footerFront {
+    margin-left: 0;
+    margin-top: 340px;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .btn-circle {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    padding: 7px 8px;
+    font-size: 20px;
+  }
+  
+  #secondPage {
+    width: 100%;
+    height: 100vh;
+    background-color: #030003;
+  }
+
+  #exForecastText {
+    font-size: 36px;
+    padding: 20px 20px 10px 20px;;
+    text-align: center;
+  }
+
+  /*Card Styles */
+
+  .card {
+    color: #421014;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  .card-block{
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .blockContents {
+    margin-left: -30px;
+  }
+
+  .card-block h3 {
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  .card-img-top {
+    margin-top: -15px;
+  }
+
+  .card li {
+    height: 52px;
+  }
+
+  .dateLi {
+    font-size: 24px;
+    padding-left:36px;
+  }
+  
+  .footer-distributed{
+    margin-top: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 576px){
+   
+  #titleText {
+    margin-top: 40px;
+  }
+
+  #titleText h1{
+    font-size: 54px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #aaa;
+  }
+
+  #titleText h3 {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+  
+  #inputForm {
+    margin-top: 15px;
+    font-size: 36px;
+  }
+  
+  input[type=text] {
+    font-size: 36px;
+    height: 60px;
+  }
+  
+  .grey-button {
+    margin-top: 5;
+    height: 44px;
+    font-size: 32px;
+  }
+  
+  #currentForecast {
+    margin: 15px auto;
+    width: 80%;
+    height: 270px;
+    background-color: black;
+    opacity:0.8;
+    color: #FFFFFF;
+    padding: 20px 0 0 40px;
+  }
+
+  #forecastText {
+    font-size: 26px;
+    text-align: left;
+  }
+  
+  #footerFront {
+    margin-left: 0;
+    margin-top: 320px;
+    font-size: 12px;
+    height: 40px;
+  }
+  
+  .btn-circle {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    padding: 7px 8px;
+    font-size: 20px;
+  }
+  
+  #secondPage {
+    width: 100%;
+    height: 100vh;
+    background-color: #030003;
+  }
+
+  #exForecastText {
+    font-size: 30px;
+    padding: 20px 20px 10px 20px;;
+    text-align: center;
+  }
+
+  /*Card Styles */
+
+  .card {
+    color: #421014;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .card-block{
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .blockContents {
+    margin-left: -30px;
+  }
+
+  .card-block h3 {
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  .card-img-top {
+    margin-top: -15px;
+  }
+
+  .card li {
+    height: 54px;
+  }
+
+  .dateLi {
+    font-size: 24px;
+    padding-left:36px;
+  }
+  
+  .footer-distributed{
+    font-size: 14px;
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+
+}
+
